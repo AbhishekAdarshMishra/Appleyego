@@ -1,0 +1,73 @@
+<div class="row">
+    <div class="col d-flex justify-content-center">
+        <div class="wrapper">
+            <div class="title">Signup</div>
+            <form #authenticationForm="ngForm" (ngSubmit)="onSubmit(authenticationForm)">
+                
+                <div class="container1">
+                    <label class="hoverable" for="fileInput">
+                        <img [src]="url ? url : 'https://www.w3schools.com/howto/img_avatar.png'">
+                        <div class="hover-text">Choose file</div>
+                        <div class="background"></div>
+                    </label>
+                    <br />
+                    <input id="fileInput" type='file' (change)="onSelectFile($event)">
+                </div>
+                
+               
+                <div class="field">
+                    <input type="text" ngModel class="form-control" id="firstName" name="firstName">
+                    <label>First Name</label>
+                </div>
+                <div class="field">
+                    <input type="text" ngModel class="form-control" id="lastName" name="lastName" >
+                    <label>Last Name</label>
+                </div>
+                <div class="field">
+                    <input type="email" ngModel class="form-control" id="email" name="email" >
+                    <label>Email</label>
+                </div>
+                <div class="field">
+                    <input type="password" ngModel class="form-control" id="password" name="password" >
+                    <label>Password</label>
+                </div>
+                <div class="field">
+                    <input type="text" ngModel class="form-control" id="bio" name="bio" >
+                    <label>Bio</label>
+                </div>
+                <div class="field">
+                    <input type="number" ngModel class="form-control" id="phoneNumber" name="phoneNumber" >
+                    <label>Phone Number</label>
+                </div>
+                <div class="field_select">                    
+                    <select name="gender" id="gender" (change)="selectGenderHandler($event)">
+                        <option value="gender">Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <!-- <div class="field_select">
+                    <select name="userRole" id="userRole" (change)="selectuserRoleHandler($event)">
+                        <option value="userRole">User Role</option>
+                        <option value="admin">Admin</option>
+                        <option value="contentWritter">Content Writter</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div> -->
+                <div class="field">
+                    <input type="date" id="dateOfBirth" name="dateOfBirth" [(ngModel)]="dateOfBirth">
+                    <label>Date of Birth</label>
+                </div>
+                
+                
+                <div class="field">
+                    <input type="submit" value="Signup">
+                </div>
+                <div class="signup-link">Already Member? <a routerLink="/side-nav/main-page/login">Login</a></div>
+                <p class="err">{{errormsg}}</p>
+            </form>
+        </div>
+    </div>
+
+</div>

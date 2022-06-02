@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "appleyego-web",
+    "Deploy": "appleyego-web"
+  },
+  "targets": {}
+}

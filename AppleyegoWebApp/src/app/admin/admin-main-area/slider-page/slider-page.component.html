@@ -1,0 +1,26 @@
+<div class="container">
+    <button class="btn btn-primary" style="margin:10px;" (click)="onAdd()"> Add Post</button><br>
+    <table class="customers">
+        <tr>
+            <th>Caption</th>
+            <th>Links</th>
+            <th>Image</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let slider of this.sliders">
+            <td>{{slider.caption}}</td>
+            <td>{{slider.link}}</td>
+            <td style="padding: 5px;">
+                <div style=" text-align: center;"><img width="30px"
+                        height="30px" src="{{url}}{{slider.image}}"></div>
+            </td>
+            <td>
+                <button class="btn btn-success" style="margin-left:10px;margin-right:10px;"
+                    (click)="onEdit(slider)">Edit</button>
+                <!-- <button class="btn btn-danger" style="margin-left:10px;margin-right:10px;" (click)="onDel(slider._id)">
+                    Del</button> -->
+            </td>
+        </tr>
+
+    </table>
+</div>

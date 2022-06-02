@@ -1,0 +1,96 @@
+<!-- <div class="card text-white mb-3">
+    <div class="card-header" style="font-weight: bold;">{{element.title|uppercase}}</div>
+    <div class="card-body">
+        <div class="card-title">
+           <div class="card-row">
+                <ul class="list-group list-group-flush" style="font-weight: bold; text-align: left;">
+                    <li class="list-group-item" >
+                        <span class="col-sm-6">Category : </span>
+                        <span class="col-sm-6"> {{element.category|titlecase}}</span>                         
+                    </li>
+                    <li *ngIf="element.startDate!=''" class="list-group-item">
+                        <span class="col-sm-6">Start Date : </span>
+                        <span class="col-sm-6"> {{element.startDate|titlecase}}</span>
+                    </li>
+                    <li *ngIf="element.endDate!=''" class="list-group-item">
+                        <span class="col-sm-6">End Date : </span>
+                        <span class="col-sm-6"> {{element.endDate|titlecase}}</span>
+                    </li>
+                    <li *ngIf="element.class!=''" class="list-group-item">
+                        <span class="col-sm-6">Class : </span>
+                        <span class="col-sm-6"> {{element.class|titlecase}}</span>
+                    </li>
+                    <li *ngIf="element.author!=''" class="list-group-item">
+                        <span class="col-sm-6">Author : </span>
+                        <span class="col-sm-6"> {{element.author|titlecase}}</span>
+                    </li>
+                </ul>
+            </div>
+        <button class="btn btn-warning">More Details</button>
+        <p class="card-text"></p>
+    </div>
+</div>
+</div>
+ -->
+                    <div class="Container_2_1_1" style="margin-top:10px">
+                        <div class="Container_2_1_1_1">
+                    
+                        </div>
+                        <div class="Container_2_1_1_2">
+                    
+                        </div>
+                        <div class="Container_2_1_1_3">
+                            <div class="Container_2_1_1_3_1">
+                                <div class="Container_2_1_1_3_1_1">
+                                    {{element.title|uppercase}}
+                                </div>
+                            </div>
+                            <div class="Container_2_1_1_3_2">
+                                <div class="Container_2_1_1_3_2_1">
+                                    <img alt="Image Not Found" src="{{url}}{{element.image}}" 
+                                        class="image_size_1">
+                                </div>
+                                <div class="Container_2_1_1_3_2_2">
+                    
+                                </div>
+                            </div>
+                            <div class="Container_2_1_1_3_3">
+                                <div class="Container_2_1_1_3_3_1">
+                                    <div class="Container_2_1_1_3_3_1_1">
+                                        Category : {{element.category|titlecase}}
+                                    </div>
+                                    <div *ngIf="element.class!=''" class="Container_2_1_1_3_3_1_2">
+                                        Class : {{element.class|titlecase}}
+                                    </div>
+                                    <div *ngIf="element.author!=''" class="Container_2_1_1_3_3_1_2">
+                                        Author : {{element.author|titlecase}}
+                                    </div>
+                                </div>
+                                <div class="Container_2_1_1_3_3_2">
+                                    <div class="Container_2_1_1_3_3_2_1">
+                                        <!-- Begin : 12 Jan 2021 | End : 14 March 2021 -->
+                                        <div *ngIf="element.startDate!=''">
+                                            Start Date : {{element.startDate}}
+                                        </div>
+                                        <div *ngIf="element.endDate!=''">
+                                            End Date : {{element.endDate}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Container_2_1_1_3_4">
+                                <div class="Container_2_1_1_3_4_1">
+                                    <a href="{{element.applyLink[0]}}">
+                                        Apply
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="Container_2_1_1_3_5">
+                                <div class="Container_2_1_1_3_5_1" (click)="onClickFunction()">
+                                    <a>
+                                        <img alt="Image Not Found" src="../../../../assets/more-btn.svg" class="icon_size_2">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>

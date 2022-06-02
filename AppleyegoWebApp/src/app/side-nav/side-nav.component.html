@@ -1,0 +1,70 @@
+<div class="wrapper1" [ngClass]="{collapse1:status===true}">
+
+    <div class="top_navbar1">
+        <div class="hamburger1" (click)="hamburger()">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+        </div>
+        <div class="top_menu1">
+            <div class="logo1 " [ngClass]="{search_close:srch===false}" >
+                <img src="../../assets/Appleyego-logo.svg"/>
+            </div>
+            <div class="search_container" [ngClass]="{search_visible:srch===false}">
+                <input type="text" placeholder="Search.." #search (keyup.enter)="onSearch(search.value)">
+                <img (click)="onSearch(search.value)" src="../../assets/Search-Icon.svg" />
+            </div>
+
+            <div class="search_open" (click)="search_open()" [ngClass]="{search_close:srch===false}">
+                <img src="../../assets/Search-Icon.svg" />
+            </div>
+            <div class="cross" (click)="search_open()" [ngClass]="{cross_close:srch===true}">
+                X
+            </div>
+            
+            <ul>
+                
+                <!-- <li><a>
+                        <img  src="../../assets/Search-Icon.svg" />
+                    </a></li> -->
+                <!-- <li><a>
+                        <img  src="../../assets/bell-fill.svg" />
+                    </a></li> -->
+                <!-- <li><a>
+                        <img  src="../../assets/Settings.svg" />
+                    </a></li> -->
+            </ul>
+        </div>
+    </div>
+
+    <div class="sidebar1">
+        <ul>
+            <li><app-profile-card [status]="status"></app-profile-card></li>
+                <li><a routerLink="/side-nav/main-page/home-feature" >
+                        <span class="icon1"><img height="18px" width="18px" src="../../assets/Home-Icon-white.svg" /></span>
+                        <span class="title1">Home</span>
+                    </a></li>
+            <li *ngFor="let category of icons">
+                <a routerLink="/side-nav/main-page/category-page/{{category.link}}">
+                    <span class="icon1"><img height="18px" width="18px" src="{{url}}{{category.icon}}" /></span>
+                    <span class="title1">{{category.category}}</span>
+                </a>
+            </li>
+            <li><a routerLink="/admin-page">
+                    <span class="icon1"><img height="18px" width="18px" src="../../assets/Settings.svg" /></span>
+                    <span class="title1">Admin Page</span>
+                </a></li>
+            
+        </ul>
+    </div>
+
+    <div class="main_container1">
+        <app-main-page ></app-main-page>
+    </div>
+    <!-- <div class="bottom_navbar1">
+    <div class="search_container1">
+        <input type="text" placeholder="Search.." #search1 (keyup.enter)="onSearch(search1.value)">
+        <img src="../../assets/Search-Icon.svg" (click)="onSearch(search1.value)"/>
+    </div>
+    </div> -->
+</div>

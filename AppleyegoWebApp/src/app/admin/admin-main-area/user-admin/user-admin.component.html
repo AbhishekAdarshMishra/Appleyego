@@ -1,0 +1,27 @@
+<div class="container">
+    <button class="btn btn-primary" style="margin:10px;" (click)="onAdd()"> Add AdminUser</button><br>
+    <table class="customers">
+        <tr>
+            <th>Email</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Gender</th>
+            <th>Bio</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let guest of this.guests">
+            <td>{{guest.email}}</td>
+            <td>{{guest.firstName}}</td>
+            <td>{{guest.lastName}}</td>
+            <td>{{guest.gender}}</td>
+            <td>{{guest.bio}}</td>
+            <td>
+                <button class="btn btn-success" style="margin-left:10px;margin-right:10px;"
+                    (click)="onEdit(guest)">Edit</button>
+                <button class="btn btn-danger" style="margin-left:10px;margin-right:10px;" (click)="onDel(guest.email)">
+                    Del</button>
+            </td>
+        </tr>
+
+    </table>
+</div>

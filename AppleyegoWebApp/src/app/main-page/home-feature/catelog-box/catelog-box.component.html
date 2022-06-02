@@ -1,0 +1,52 @@
+
+<div class="container_body" *ngIf="post.length>0">
+    <div class="container_1">
+        <div class="container_1_1">
+            <div class="container_1_1_1">
+                <div class="container_1_1_1_1">
+                    <a >
+                        <img alt="Icon Not Found" src="{{url}}{{elem.icon}}" class="icon_size_1">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container_1_2">
+            <div class="container_1_2_1">
+                <a>
+                    {{elem.category}}
+                </a>
+            </div>
+            <div class="container_1_2_2">
+                <!-- Sub Heading -->
+            </div>
+        </div>
+        <div class="container_1_3">
+            <div class="container_1_3_1">
+                <a >
+                    <img alt="Icon Not Found" src="../../../../assets/Left_move.svg" class="icon_size_2" (click)="scrollLeft()">
+                </a>
+            </div>
+        </div>
+        <div class="container_1_4">
+            <div class="container_1_4_1">
+                <a >
+                    <img alt="Icon Not Found" src="../../../../assets/Right_move.svg" class="icon_size_2" (click)="scrollRight()">
+                </a>
+            </div>
+        </div>
+        <div class="container_1_5">
+            <div class="container_1_5_1">
+                <a routerLink="/side-nav/main-page/category-page/{{elem.link}}">
+                    Show All
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container_2">
+        <div class="container_2_1" #panel>     
+                <app-catelog-card *ngFor="let card of post19" [element]="card"></app-catelog-card>
+        </div>
+
+
+    </div>
+</div>

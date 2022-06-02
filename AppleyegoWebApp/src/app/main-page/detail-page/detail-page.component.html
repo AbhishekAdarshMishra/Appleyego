@@ -1,0 +1,149 @@
+<div class="Body_Container">
+    <!-- <div class="Container_1">
+        <div class="back_btn bg-danger" (click)="onBack()">Back</div>
+    </div> -->
+    
+    <div class="Container_1">
+        <div class="Container_1_1">
+            <div class="Container_1_1_1">
+
+            </div>
+            <div class="Container_1_1_2">
+                <div class="Container_1_1_2_1">
+                    <div class="Container_1_1_2_1_1">
+                        <div class="Container_1_1_2_1_1_1">
+                            <a >
+                                {{this.post.category|titlecase}}
+                            </a>
+                        </div>
+                    </div>
+                    <div class="Container_1_1_2_1_2">
+                        <!-- <img alt="Icon Not Found" src="../../../assets/Triple_dotted_menu.svg" class="icon_size_1"> -->
+                        <div class="back_btn bg-danger" (click)="onBack()">x</div>
+                    </div>
+                </div>
+                <div class="Container_1_1_2_2">
+
+                </div>
+                <div class="Container_1_1_2_3">
+                    <div class="Container_1_1_2_3_1">
+                        <div class="Container_1_1_2_3_1_1">
+                            <a>
+                                <img alt="Image Not Found Not Found"
+                                    src="{{url}}{{post.image}}" 
+                                    class="image_size_1">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="Container_1_1_2_3_2">
+                        <div class="Container_1_1_2_3_2_1">
+                                {{this.post.title|titlecase}}
+                        </div>
+                        <div *ngIf="post.subTitle!=''" class="Container_1_1_2_3_2_2" >
+                                {{this.post.subTitle|titlecase}}
+                        </div>
+                        <!-- <div *ngIf="post.class!=''" class="Container_1_1_2_3_2_2">
+                            <b>Class : </b>{{this.post.class|titlecase}}
+                        </div>
+                        <div *ngIf="post.author!=''" class="Container_1_1_2_3_2_2">
+                            <b>Author : </b>{{this.post.author|titlecase}}
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Short_noti_cont">
+            <div class="Short_noti_cont_1">
+                <div class="Short_noti_cont_1_1">
+                    Short Notification
+                </div>
+            </div>
+        </div>
+        <div class="Container_1_2">
+            <div class="Container_1_2_1">
+                <div class="Container_1_2_1_2">
+                    <div class="Container_1_2_1_2_1">
+                        Start and End Dates
+                    </div>
+                    <div class="Container_1_2_1_2_2">
+                        <ul>
+                            <li *ngIf="this.post.startDate!=''"><b>Application Begin :</b>{{this.post.startDate}}</li>
+                            <li *ngIf="this.post.startDate===''"><b>Application Begin :</b>Not Available</li>
+                            <li *ngIf="this.post.endDate!=''"><b>Application Close :</b>{{this.post.endDate}}</li>
+                            <li *ngIf="this.post.endDate===''"><b>Application Begin :</b>Not Available</li>
+                        </ul>
+                    </div>
+                </div>
+                <div *ngIf="this.post.links!=''" class="Container_1_2_1_2">
+                    <div class="Container_1_2_1_2_1">
+                        Important Dates
+                    </div>
+                    <div class="Container_1_2_1_2_2">
+                        <!-- {{this.post.links}} -->
+                        <span [innerHTML]="post.links"></span>
+                    </div>
+                </div>
+                <div *ngIf="this.post.importantInformation!=''" class="Container_1_2_1_2">
+                    <div class="Container_1_2_1_2_1">
+                        Important Information
+                    </div>
+                    <div class="Container_1_2_1_2_2">
+                        <!-- {{this.post.importantInformation}} -->
+                        <span [innerHTML]="post.importantInformation"></span>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="this.post.details!=''" class="Container_1_2_2">
+                <div  class="Container_1_2_1_2">
+                    <div class="Container_1_2_1_2_1">
+                        Details
+                    </div>
+                    <div class="Container_1_2_1_2_2">
+                        <!-- {{this.post.details}} -->
+                        <span [innerHTML]="post.details"></span>
+                    </div>
+                </div>
+                <div *ngIf="this.post.howTo!=''" class="Container_1_2_1_2">
+                    <div class="Container_1_2_1_2_1">
+                        How to Fill Form
+                    </div>
+                    <div class="Container_1_2_1_2_2">
+                        <!-- {{this.post.howTo}} -->
+                        <span [innerHTML]="post.howTo"></span>
+                    </div>
+                </div>
+                <div *ngIf="this.post.someInfo!=''" class="Container_1_2_1_2">
+                    <div class="Container_1_2_1_2_1">
+                        Some More Information
+                    </div>
+                    <div class="Container_1_2_1_2_2">
+                        <!-- {{this.post.someInfo}} -->
+                        <span [innerHTML]="post.someInfo"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Container_1_3">
+            <div class="Container_1_3_1" *ngFor="let link of this.post.applyLink; let i = index">
+                <div class="Container_1_3_1_1">
+                    <a *ngIf="i===0" href="{{link}}">
+                        Apply By Online
+                    </a>
+                    <a *ngIf="i!=0" href="{{link}}">
+                        LINK {{i+1}}
+                    </a>
+                </div>
+                <!-- <div class="Container_1_3_1_1">
+                    <a href="#">
+                        Download Full Notification
+                    </a>
+                </div>
+                <div class="Container_1_3_1_1">
+                    <a href="#">
+                        Official Website
+                    </a>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div>

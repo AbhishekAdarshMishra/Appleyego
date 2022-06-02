@@ -1,0 +1,40 @@
+
+<div class="container">
+<button class="btn btn-primary" style="margin:10px;" (click)="onAdd()"> Add Post</button><br>
+<label><b>Category</b></label>
+<select class="form-select mb-4" name="category" id="category"
+    (change)="selectCategoryHandler($event)">
+    <option value="All">All</option>
+    <!-- <option value="jobs">Jobs</option>
+    <option value="admissions">Admissions</option>
+    <option value="scholarships">Scholarships</option>
+    <option value="results">Result</option>
+    <option value="admitCards">Admit Cards</option>
+    <option value="syllabus">Syllabus</option>
+    <option value="business">Business</option>
+    <option value="documents">Documents</option>
+    <option value="answerKeys">Answer Keys</option>
+    <option value="quesPaper">Ques Paper</option> -->
+    <option *ngFor="let icon of icons" value={{icon.link}}>{{icon.category}}</option>
+</select>
+<table class="customers">
+    <tr>
+        <th>Title</th>
+        <th>Category</th>
+        <th>class</th>
+        <th>Author</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let post of this.posts">
+        <td>{{post.title}}</td>
+        <td>{{post.category}}</td>
+        <td>{{post.class}}</td>
+        <td>{{post.author}}</td>
+        <td>
+            <button class="btn btn-success" style="margin-left:10px;margin-right:10px;" (click)="onEdit(post)" >Edit</button>
+            <button class="btn btn-danger" style="margin-left:10px;margin-right:10px;" (click)="onDel(post._id)"> Del</button>
+        </td>
+    </tr>
+    
+</table>
+</div>

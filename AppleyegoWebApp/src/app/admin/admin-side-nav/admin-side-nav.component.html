@@ -1,0 +1,80 @@
+<div class="wrapper1" [ngClass]="{collapse1:status===true}">
+
+    <div class="top_navbar1">
+        <div class="hamburger1" (click)="hamburger()">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+        </div>
+        <div class="top_menu1">
+            <div class="logo1 ">
+                <img src="../../assets/Appleyego-logo.svg" />
+            </div>
+
+            <ul>
+                <!-- <li><a>
+                        <img  src="../../assets/Search-Icon.svg" />
+                    </a></li> -->
+                <!-- <li><a>
+                        <img  src="../../assets/bell-fill.svg" />
+                    </a></li> -->
+                <!-- <li><a>
+                        <img  src="../../assets/Settings.svg" />
+                    </a></li> -->
+            </ul>
+        </div>
+    </div>
+
+    <div class="sidebar1">
+        <ul>
+            <li>
+                <app-admin-profile [status]="status"></app-admin-profile>
+            </li>
+            <li><a routerLink="/admin-page/admin-side-nav/admin-main-area/admin-post-page">
+                    <span class="icon1"><img height="18px" width="18px" src="../../../assets/post.svg" /></span>
+                    <span class="title1">Post</span>
+                </a></li>
+            <li>
+                <a routerLink="/admin-page/admin-side-nav/admin-main-area/admin-category-setting">
+                    <span class="icon1"><img height="18px" width="18px" src="../../../assets/Category.svg" /></span>
+                    <span class="title1">Category</span>
+                </a>
+            </li>
+            <li>
+                <a routerLink="/admin-page/admin-side-nav/admin-main-area/admin-user-guest">
+                    <span class="icon1"><img height="18px" width="18px" src="../../../assets/Jobs-Avatar.svg" /></span>
+                    <span class="title1">Users Guest</span>
+                </a>
+            </li>
+            <li>
+                <a routerLink="/admin-page/admin-side-nav/admin-main-area/admin-user-admin">
+                    <span class="icon1"><img height="18px" width="18px" src="../../../assets/Jobs-Avatar.svg" /></span>
+                    <span class="title1">Users Admin</span>
+                </a>
+            </li>
+            <li>
+                <a routerLink="/admin-page/admin-side-nav/admin-main-area/admin-slider-page">
+                    <span class="icon1"><img height="18px" width="18px" src="../../../assets/slider.svg" /></span>
+                    <span class="title1">Slider</span>
+                </a>
+            </li>
+            <!-- <li>
+                <a routerLink="/admin-page/admin-side-nav/admin-main-area/admin-notification-page">
+                    <span class="icon1"><img height="18px" width="18px" src="../../../assets/Notification-Icon.svg" /></span>
+                    <span class="title1">Notification</span>
+                </a>
+            </li>
+            <li>
+                <a routerLink="/admin-page/admin-side-nav/admin-main-area/admin-ads">
+                    <span class="icon1"><img height="18px" width="18px" src="../../../assets/Advertisement.svg" /></span>
+                    <span class="title1">Ads</span>
+                </a>
+            </li> -->
+
+        </ul>
+    </div>
+
+    <div class="main_container1">
+        <app-admin-main-area></app-admin-main-area>
+    </div>
+</div>

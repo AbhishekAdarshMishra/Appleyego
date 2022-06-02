@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "AppleyegoBackend",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

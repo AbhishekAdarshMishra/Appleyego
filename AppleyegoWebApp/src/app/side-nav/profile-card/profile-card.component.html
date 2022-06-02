@@ -1,0 +1,16 @@
+<div class="container1">
+    <div class="row0">
+        <div  class="row1" [ngClass]="{collapse1:status===true}">
+            <a routerLink="/side-nav/main-page/login">
+                <img class="img-responsive" src={{userImg}}/>
+            </a>
+        </div>
+        <div class="row2" [ngClass]="{collapse1:status===true}">
+                {{userName}}
+                <div class="inner_row2" routerLink="/side-nav/main-page/login" [ngClass]="{logged:logged===true}">Login/Signup</div>
+                <div class="inner2_row2" [ngClass]="{logged:logged===false}" (click)="logout()">Logout</div>
+        </div>
+        
+    </div>
+
+</div>
